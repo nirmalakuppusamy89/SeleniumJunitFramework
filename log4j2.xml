@@ -1,0 +1,16 @@
+
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5p %c{1}:%L - %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="net.lightbody.bmp.filters" level="error" />
+        <Logger name="net.lightbody.bmp.mitm.util" level="error" />
+        <Logger name="org.littleshoot.proxy.impl" level="off" />
+        <Root level="info">
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
