@@ -9,9 +9,9 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BasketTests extends CommonFunctions {
+public class NextBasketTests extends CommonFunctions {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(BasketTests.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(NextBasketTests.class);
 
     @Before
     public void beforeTest()

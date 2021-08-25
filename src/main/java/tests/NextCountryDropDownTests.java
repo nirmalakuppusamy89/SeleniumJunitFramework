@@ -9,9 +9,9 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CountryDropDownTests extends CommonFunctions {
+public class NextCountryDropDownTests extends CommonFunctions {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(CountryDropDownTests.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(NextCountryDropDownTests.class);
 
     @Before
     public void beforeTest()
