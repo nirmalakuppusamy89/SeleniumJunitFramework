@@ -9,7 +9,6 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class BasketTests extends CommonFunctions {
 
     private static Logger LOGGER = LoggerFactory.getLogger(BasketTests.class);
@@ -277,7 +276,6 @@ public class BasketTests extends CommonFunctions {
         Assert.assertTrue(actualQuantityText.contains("Your bag contains 0 item"));
 
     }
-
 
     @After
     public void afterTest()
