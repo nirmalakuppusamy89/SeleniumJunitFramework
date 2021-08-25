@@ -239,7 +239,6 @@ public class NextBasketTests extends CommonFunctions {
 
         LOGGER.info("Verifying the search text");
         Assert.assertEquals(expectedText, actualSearchText);
-        String expectedProductName = driver.findElement(By.xpath("//*[@id=\"i1\"]/section/div[1]/h2/a/span")).getText();
 
         LOGGER.info("Selecting and opening the first item from the search results");
         driver.findElement(By.xpath("//*[@id=\"i1\"]/section/div[1]/h2/a/span")).click();

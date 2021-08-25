@@ -50,7 +50,8 @@ public class AdmiralAutoQuoteTests extends CommonFunctions {
         driver.findElement(By.xpath("//button[contains(text(),'Find car')]")).click();
         forceWaitForTime(3);
         LOGGER.info("Getting registration number");
-        String actualRegistrationNumber = driver.findElement(By.xpath("//*[@id=\"ng-app\"]/div[2]/div/main/div[2]/div[2]/div/span/div/h3")).getText();
+        String actualRegistrationNumber = driver.findElement(
+                By.xpath("//*[@id=\"ng-app\"]/div[2]/div/main/div[2]/div[2]/div/span/div/h3")).getText();
         LOGGER.info("verifying the registration number");
         Assert.assertTrue(actualRegistrationNumber.contains("EY53 UOE"));
 
