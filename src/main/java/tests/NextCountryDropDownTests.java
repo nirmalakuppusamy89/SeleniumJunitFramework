@@ -28,7 +28,8 @@ public class NextCountryDropDownTests extends CommonFunctions {
 
         forceWaitForTime(5);
         LOGGER.info("User clicks the dropDown");
-        driver.findElement(By.xpath("//header/div[2]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]\n")).click();
+        driver.findElement(
+                By.xpath("//header/div[2]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]\n")).click();
 
         forceWaitForTime(3);
         LOGGER.info("User selects different country");

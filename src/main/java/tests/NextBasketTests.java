@@ -31,18 +31,21 @@ public class NextBasketTests extends CommonFunctions {
         driver.findElement(By.xpath("//*[@id=\"newsearch\"]/input[4]")).click();
 
         LOGGER.info("Getting the search text value ");
-        String actualSearchText =  driver.findElement(By.xpath("//*[@id=\"ResultHeader\"]/div[1]/h1/div")).getText();
+        String actualSearchText =  driver.findElement(
+                By.xpath("//*[@id=\"ResultHeader\"]/div[1]/h1/div")).getText();
         String expectedText = "T-Shirt";
 
         LOGGER.info("Verifying the search text");
         Assert.assertEquals(expectedText, actualSearchText);
-        String expectedProductName = driver.findElement(By.xpath("//*[@id=\"i1\"]/section/div[1]/h2/a/span")).getText();
+        String expectedProductName = driver.findElement(
+                By.xpath("//*[@id=\"i1\"]/section/div[1]/h2/a/span")).getText();
 
         LOGGER.info("Selecting and opening the first item from the search results");
         driver.findElement(By.xpath("//*[@id=\"i1\"]/section/div[1]/h2/a/span")).click();
 
         LOGGER.info("Getting the selected item name");
-        String actualItemName = driver.findElement(By.xpath("//h1[contains(text(),'Curved Hem T-Shirt')]")).getText();
+        String actualItemName = driver.findElement(
+                By.xpath("//h1[contains(text(),'Curved Hem T-Shirt')]")).getText();
 
         LOGGER.info("Verifying the selected item name");
         Assert.assertTrue(actualItemName.contains(expectedText));
@@ -234,7 +237,8 @@ public class NextBasketTests extends CommonFunctions {
         driver.findElement(By.xpath("//*[@id=\"newsearch\"]/input[4]")).click();
 
         LOGGER.info("Getting the search text value ");
-        String actualSearchText =  driver.findElement(By.xpath("//*[@id=\"ResultHeader\"]/div[1]/h1/div")).getText();
+        String actualSearchText =  driver.findElement(
+                By.xpath("//*[@id=\"ResultHeader\"]/div[1]/h1/div")).getText();
         String expectedText = "T-Shirt";
 
         LOGGER.info("Verifying the search text");
@@ -244,7 +248,8 @@ public class NextBasketTests extends CommonFunctions {
         driver.findElement(By.xpath("//*[@id=\"i1\"]/section/div[1]/h2/a/span")).click();
 
         LOGGER.info("Getting the selected item name");
-        String actualItemName = driver.findElement(By.xpath("//h1[contains(text(),'Curved Hem T-Shirt')]")).getText();
+        String actualItemName = driver.findElement(
+                By.xpath("//h1[contains(text(),'Curved Hem T-Shirt')]")).getText();
 
         LOGGER.info("Verifying the selected item name");
         Assert.assertTrue(actualItemName.contains(expectedText));
