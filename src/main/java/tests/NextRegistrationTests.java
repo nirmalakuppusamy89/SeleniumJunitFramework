@@ -37,13 +37,6 @@ public class NextRegistrationTests extends CommonFunctions {
         LOGGER.info("verifying valid register page");
         Assert.assertTrue(actualQuickSignUpText.contains("Quick Secure Sign Up"));
 
-//
-//        LOGGER.info("User clicks the dropdown");
-//        driver.findElement(By.xpath("//*[@id=\"Title\"]")).click();
-//
-//        LOGGER.info("User choose the Title ");
-//        driver.findElement(By.xpath("//*[@id=\"Title\"]/option[3]")).click();
-
         LOGGER.info("Selecting title from dropdown");
         Select dropdownTitle = new Select(driver.findElement(By.name("Title")));
         dropdownTitle.selectByValue("Mrs");
@@ -102,16 +95,7 @@ public class NextRegistrationTests extends CommonFunctions {
         LOGGER.info("Verifying the successful registration text");
         Assert.assertEquals(actualSuccessfulRegistrationText, "Thank you for registering.");
 
-
-
-
-
-
     }
-
-
-
-
 
     @After
     public void afterTest()

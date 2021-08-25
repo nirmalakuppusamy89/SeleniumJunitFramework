@@ -55,17 +55,7 @@ public class AdmiralAutoQuoteTests extends CommonFunctions {
         LOGGER.info("verifying the registration number");
         Assert.assertTrue(actualRegistrationNumber.contains("EY53 UOE"));
 
-
-
-
-
-
     }
-
-
-
-
-
 
 
     @After
