@@ -24,7 +24,7 @@ public class NextRegistrationTests extends CommonFunctions {
 
     }
     @Test
-    public void RegisterAndVerifyUserLogIn()
+    public void registerAndVerifyUserLogIn()
     {
         LOGGER.info("verify user clicks my account button");
         driver.findElement(By.xpath("/html/body/header/div[2]/section/section[3]/ul/li[1]/a")).click();

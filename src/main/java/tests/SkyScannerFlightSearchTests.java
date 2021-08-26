@@ -1,0 +1,60 @@
+package tests;
+
+import functionLibrary.CommonFunctions;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SkyScannerFlightSearchTests extends CommonFunctions {
+
+    private static Logger LOGGER = LoggerFactory.getLogger(SkyScannerFlightSearchTests.class);
+
+    @Before
+    public void beforeTest()
+    {
+        openBrowser();
+        driver.get("https://www.skyscanner.net/");
+
+    }
+
+    @Test
+    public void defaultFlightSearch()
+    {
+
+        LOGGER.info("Clicking cookies button");
+        driver.findElement(By.xpath("//*[@id=\"cookie-banner-root\"]/div[1]/div/div[2]/button[1]")).click();
+        forceWaitForTime(3);
+
+        String expectedSearchText = "India";
+        LOGGER.info("Entering actual destination country text");
+        driver.findElement(By.xpath("//*[@id=\"fsc-destination-search\"]")).sendKeys(expectedSearchText);
+
+        LOGGER.info("User clicks search flights button");
+        driver.findElement(By.xpath("//*[@id=\"flights-search-controls-root\"]/div/div/form/div[3]/button")).click();
+        forceWaitForTime(3);
+
+        LOGGER.info("Getting destination country value");
+        String actualSearchPageText = driver.findElement(
+                By.xpath("//*[@id=\"flights-search-summary-root\"]/div/section/div[2]/div/div[1]/span[4]")).getText();
+        forceWaitForTime(3);
+        LOGGER.info("Verifying the search result page text");
+        Assert.assertEquals(expectedSearchText, actualSearchPageText);
+
+    }
+
+
+
+
+
+    @After
+    public void afterTest()
+    {
+        closeBrowser();
+
+    }
+
+}
