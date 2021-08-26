@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class NextBasketTests extends CommonFunctions {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(NextBasketTests.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(NextBasketTests.class);
 
     @Before
     public void beforeTest()

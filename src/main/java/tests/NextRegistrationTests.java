@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 public class NextRegistrationTests extends CommonFunctions {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(NextRegistrationTests.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(NextRegistrationTests.class);
 
     @Before
     public void beforeTest()

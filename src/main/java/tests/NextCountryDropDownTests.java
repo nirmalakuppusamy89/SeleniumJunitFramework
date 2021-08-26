@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class NextCountryDropDownTests extends CommonFunctions {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(NextCountryDropDownTests.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(NextCountryDropDownTests.class);
 
     @Before
     public void beforeTest()

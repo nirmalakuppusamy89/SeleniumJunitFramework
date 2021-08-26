@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class SkyScannerFlightSearchTests extends CommonFunctions {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(SkyScannerFlightSearchTests.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SkyScannerFlightSearchTests.class);
 
     @Before
     public void beforeTest()
@@ -45,10 +45,6 @@ public class SkyScannerFlightSearchTests extends CommonFunctions {
         Assert.assertEquals(expectedSearchText, actualSearchPageText);
 
     }
-
-
-
-
 
     @After
     public void afterTest()
