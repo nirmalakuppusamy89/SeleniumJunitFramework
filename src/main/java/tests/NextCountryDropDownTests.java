@@ -21,7 +21,7 @@ public class NextCountryDropDownTests extends CommonFunctions {
 
     }
     @Test
-    public void verifyUToSelectTheCountry() {
+    public void verifyUserSelectedCountry() {
 
         LOGGER.info("User clicks the headerFlagSelector");
         driver.findElement(By.id("headerFlagSelector")).click();
