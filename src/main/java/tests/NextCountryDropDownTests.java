@@ -27,6 +27,13 @@ public class NextCountryDropDownTests extends CommonFunctions {
         driver.findElement(By.id("headerFlagSelector")).click();
 
         forceWaitForTime(5);
+        LOGGER.info("Getting shop by country text value");
+        String actualShopByCountryText = driver.findElement(
+                By.xpath("//*[@id=\"headerFlagSelector\"]/div[3]/div/p")).getText();
+
+        LOGGER.info("Verifying the shop by country text");
+        Assert.assertEquals("Shop By Country", actualShopByCountryText);
+
         LOGGER.info("User clicks the dropDown");
         driver.findElement(
                 By.xpath("//header/div[2]/section[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/a[1]\n")).click();
