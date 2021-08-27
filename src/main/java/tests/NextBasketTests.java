@@ -130,15 +130,17 @@ public class NextBasketTests extends CommonFunctions {
         driver.findElement(By.xpath("//*[@id=\"i4\"]/section/div[2]/a/img")).click();
 
         LOGGER.info("Clicking on the size dropdown");
-        driver.findElement(By.xpath("//*[@id=\"dk_container_Size-479-847\"]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"dk_container_Size-124-922\"]/a")).click();
+
+        forceWaitForTime(2);
 
         LOGGER.info("Selecting the right size");
-        driver.findElement(By.xpath("//*[@id=\"dk_container_Size-479-847\"]/div/ul/li[2]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"dk_container_Size-124-922\"]/div/ul/li[3]/a")).click();
 
         LOGGER.info("Clicking the add to bag button for second item");
         waitForTime(3);
         driver.findElement(
-                By.xpath("/html/body/section[1]/section[1]/div[1]/div[2]/div[2]/div/section[2]/article/section/div[5]/div[18]/div[4]/div/a[1]")).click();
+                By.xpath("//a[contains(text(),'ADD TO BAG')]")).click();
 
         LOGGER.info("Clicking the basket icon");
         driver.findElement(By.id("gel-bag-summary")).click();
