@@ -33,7 +33,7 @@ public class GoogleSearchTests extends CommonFunctions {
         driver.findElement(By.xpath("//div[contains(text(),'I agree')]")).click();
         forceWaitForTime(3);
 
-        LOGGER.info("User searching ERP training");
+        LOGGER.info("User searching software testing");
         String searchText = "software testing";
         int nbOfResultsToSearch = 5;
         driver.findElement(By.cssSelector("input[name=q]")).sendKeys(searchText);
@@ -47,7 +47,13 @@ public class GoogleSearchTests extends CommonFunctions {
 
     }
 
-    boolean isInResults(List<WebElement> searchResultList, String searchText, int nbOfResultsToSearch)
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+
+    public boolean isInResults(List<WebElement> searchResultList, String searchText, int nbOfResultsToSearch)
     {
         forceWaitForTime(2);
         return IntStream.range(0, Math.min(searchResultList.size(), nbOfResultsToSearch))

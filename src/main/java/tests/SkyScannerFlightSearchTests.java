@@ -24,7 +24,7 @@ public class SkyScannerFlightSearchTests extends CommonFunctions {
     @Test
     public void defaultFlightSearch()
     {
-        forceWaitForTime(10);
+      //  forceWaitForTime(10);
         LOGGER.info("Clicking cookies button");
         driver.findElement(By.xpath("//*[@id=\"cookie-banner-root\"]/div[1]/div/div[2]/button[1]")).click();
         forceWaitForTime(3);
